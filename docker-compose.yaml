@@ -5,18 +5,19 @@ services:
     volumes:
       - ./pzserver:/opt/pzserver
       - ./steam:/root/.steam
+      - ./:/app
     ports:
       - 16261:16261
       - 16262:16262
-    stdin_open: true 
-    tty: true
     command:
       - /bin/sh
       - -c
       - |
-         tail -F anything
-#        steamcmd +runscript /app/zomboid.txt
-#        /opt/pzserver/start-server.sh
+#        tail -F anything
+        steamcmd +runscript /app/zomboid.txt
+        /opt/pzserver/start-server.sh > /app/output.log
         
 # to access console:
 # docker-compose exec zomboid bash
+
+#default admin: zombieadmin
