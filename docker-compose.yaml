@@ -5,7 +5,7 @@ services:
     volumes:
       - ./pzserver:/opt/pzserver
       - ./steam:/root/.steam
-      - ./:/app
+      - .:/app
     ports:
       - 16261:16261
       - 16262:16262
