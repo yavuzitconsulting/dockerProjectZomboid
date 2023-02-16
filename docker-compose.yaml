@@ -2,6 +2,7 @@ version: "3.3"
 services:
   zomboid:
     build: .
+    working_dir: /opt/pzserver
     volumes:
       - ./pzserver:/opt/pzserver
       - ./steam:/root/.steam
@@ -10,6 +11,7 @@ services:
       - 16261:16261
       - 16262:16262
     command:
-      - /opt/pzserver/start-server.sh -adminpassword zombieadmin
+      - bash start-server.sh -adminpassword zombieadmin
+      #- /opt/pzserver/start-server.sh -adminpassword zombieadmin
         
 #default admin: zombieadmin
