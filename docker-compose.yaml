@@ -4,6 +4,7 @@ services:
     build: .
     volumes:
       - ./pzserver:/opt/pzserver
+      - ./Steam:/root/Steam
     ports:
       - 16261:16261
     command:
