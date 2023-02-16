@@ -5,4 +5,3 @@ force_install_dir /opt/pzserver/
 login anonymous 
 app_update 380870 validate
 quit
-EOL
