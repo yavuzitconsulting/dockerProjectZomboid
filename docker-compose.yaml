@@ -10,6 +10,6 @@ services:
       - 16261:16261
       - 16262:16262
     command:
-      - /opt/pzserver/start-server.sh > /app/output.log
+      - /opt/pzserver/start-server.sh > /dev/stdout
         
 #default admin: zombieadmin
