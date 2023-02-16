@@ -1,4 +1,4 @@
-FROM steamcmd/steamcmd:ubuntu-20
+FROM steamcmd/steamcmd:ubuntu-18
 WORKDIR /app
 COPY . .
 RUN apt-get upgrade -y && apt-get update -y
