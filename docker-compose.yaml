@@ -11,7 +11,11 @@ services:
       - 16261:16261
       - 16262:16262
     command:
-      - bash start-server.sh -adminpassword zombieadmin
-      #- /opt/pzserver/start-server.sh -adminpassword zombieadmin
-        
+      - /bin/sh
+      - -c
+      - |
+        bash start-server.sh -adminpassword zombieadmin
+
+#- bash start-server.sh -adminpassword zombieadmin
+#- /opt/pzserver/start-server.sh -adminpassword zombieadmin
 #default admin: zombieadmin
