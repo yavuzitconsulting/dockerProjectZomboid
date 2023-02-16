@@ -7,6 +7,9 @@ services:
       - ./steam:/root/.steam
     ports:
       - 16261:16261
+      - 16262:16262
+    stdin_open: true 
+    tty: true
     command:
       - /bin/sh
       - -c
