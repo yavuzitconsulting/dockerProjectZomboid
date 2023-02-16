@@ -14,7 +14,7 @@ services:
       - /bin/sh
       - -c
       - |
-        bash start-server.sh -adminpassword zombieadmin
+        bash start-server.sh -adminpassword zombieadmin -servername woahdude
 
 #- bash start-server.sh -adminpassword zombieadmin
 #- /opt/pzserver/start-server.sh -adminpassword zombieadmin
