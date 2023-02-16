@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  zomboid:
+    build: .
+    volumes:
+      - ./pzserver:/opt/pzserver
+    ports:
+      - 16261:16261
+    command:
+      - /bin/sh
+      - -c
+      - |
+        /opt/pzserver/start-server.sh
