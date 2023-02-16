@@ -1,6 +1,7 @@
 FROM steamcmd/steamcmd:ubuntu-22
 WORKDIR /app
 COPY . .
+RUN apt-get install gnupg2 -y
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
 RUN apt-get upgrade -y && apt-get update -y
 RUN adduser --disabled-password pzuser
