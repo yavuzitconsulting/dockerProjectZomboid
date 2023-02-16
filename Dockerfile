@@ -1,8 +1,8 @@
 FROM steamcmd/steamcmd:ubuntu-22
 WORKDIR /app
 COPY . .
-RUN apt-get install -y gnupg
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
+RUN sudo gpg --keyserver pgpkeys.mit.edu --recv-key 871920D1991BC93C
+RUN gpg -a --export 871920D1991BC93C | sudo apt-key add -
 RUN apt-get upgrade -y && apt-get update -y
 RUN adduser --disabled-password pzuser
 RUN mkdir /opt/pzserver
