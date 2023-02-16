@@ -14,4 +14,8 @@ services:
       - /bin/sh
       - -c
       - |
+        steamcmd +runscript /app/zomboid.txt
         /opt/pzserver/start-server.sh
+        
+# to access console:
+# docker-compose exec zomboid bash
